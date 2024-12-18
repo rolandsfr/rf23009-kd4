@@ -3,13 +3,15 @@ import random
 # Generates a random motivational quote
 
 def generate_quote():
-    subjects = ["You", "Your determination", "Success"]
-    verbs = ["can overcome", "will achieve", "inspires"]
-    objects = ["any obstacle.", "greatness.", "the world."]
+    parts = {
+        "subjects": ["You", "Your determination", "Success"],
+        "verbs": ["can overcome", "will achieve", "inspires"],
+        "objects": ["any obstacle.", "greatness.", "the world."]
+    }
 
-    subject = random.choice(subjects)
-    verb = random.choice(verbs)
-    obj = random.choice(objects)
+    subject = random.choice(parts["subjects"])
+    verb = random.choice(parts["verbs"])
+    obj = random.choice(parts["objects"])
 
     return f"{subject} {verb} {obj}"
 
